@@ -1,18 +1,13 @@
+import React from "react";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-function Layout({ children, otherChild, showNav, showFooter, classStyles }) {
+function Layout({ children, otherChild }) {
   return (
     <>
-      {showNav ? <Navbar /> : <></>}
-      <main className={classStyles}>{children}</main>
-      {showFooter ? <Footer /> : <></>}
+      <Navbar />
+      <main className="">{children}</main>
+      <Footer />
     </>
   );
 }
-
-Layout.defaultProps = {
-  showNav: true,
-  showFooter: true,
-};
-
 export default Layout;

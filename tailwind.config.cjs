@@ -11,7 +11,6 @@ function withOpacity(variableName) {
 }
 
 module.exports = {
-  darkMode: ["class", '[data-mode="dark"]'],
   content: [
     "./index.html",
     "./src/client/**/*.{js,ts,jsx,tsx}",
@@ -94,7 +93,7 @@ module.exports = {
   // daisyUI config
   daisyui: {
     styled: true,
-    themes: false,
+    themes: true,
     base: true,
     utils: true,
     logs: true,

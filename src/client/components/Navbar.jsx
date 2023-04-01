@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import React from "react";
 import logo from "../assets/react.svg";
 
 const navMenu = ["Home", "Explore", "About"];
@@ -28,7 +28,7 @@ function navbar() {
             <div className="flex items-center md:hidden max-h-10">
               <label
                 role="button"
-                htmlFor="toggle_nav"
+                for="toggle_nav"
                 aria-label="humburger"
                 id="hamburger"
                 className="relative z-40 px-2 py-3 sm:-mr-6"
@@ -47,7 +47,7 @@ function navbar() {
 
           <label
             role="button"
-            htmlFor="toggle_nav"
+            for="toggle_nav"
             className="fixed top-0 left-0 z-30 hidden w-full h-full bg-gray-700 bg-opacity-40 peer-checked:block md:peer-checked:hidden"
           ></label>
 
@@ -65,8 +65,8 @@ function navbar() {
             </div>
             <div className="block w-full h-full md:h-auto">
               <ul className="space-y-8 font-medium tracking-wide md:flex md:space-y-0">
-                {navMenu.map((navItem, index) => (
-                  <li key={index}>
+                {navMenu.map((navItem) => (
+                  <li>
                     <a href="#" className="block md:px-3 group">
                       <div
                         className="relative text-gray-600
@@ -88,12 +88,9 @@ function navbar() {
                 title="Start buying"
                 className="duration-200 group dark:active:bg-yellow-800 dark:hocus:bg-yellow-900 active:bg-yellow-200 hocus:bg-yellow-100 btn btn-ghost"
               >
-                <Link
-                  to="/login"
-                  className="text-gray-700 duration-200 dark:text-gray-300 group-hover:text-yellow-700 group-focus:text-yellow-700 dark:group-focus:text-yellow-100 dark:group-hover:text-yellow-100"
-                >
+                <span className="text-gray-700 duration-200 dark:text-gray-300 group-hover:text-yellow-700 group-focus:text-yellow-700 dark:group-focus:text-yellow-100 dark:group-hover:text-yellow-100">
                   Login
-                </Link>
+                </span>
               </button>
               <button type="button" title="View More" className="bg-black btn">
                 <span className="">View More</span>
