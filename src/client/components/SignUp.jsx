@@ -18,14 +18,14 @@ function SignUp(props) {
         >
           <h2 className="py-6 text-4xl font-bold text-center">Sign-UP.</h2>
           <div className="flex flex-col py-2">
-            <label htmlFor="">Username</label>
+            <label>Username</label>
             <input
               type="text"
               className="p-2 duration-200 border border-gray-700 border-opacity-25 rounded-md outline-none dark:border-white dark:bg-gray-900 hocus:border-opacity-80"
             />
           </div>
           <div className="flex flex-col py-2">
-            <label htmlFor="">Password</label>
+            <label>Password</label>
             <input
               type="password"
               className="p-2 duration-200 border border-gray-700 border-opacity-25 rounded-md outline-none dark:border-white dark:bg-gray-900 hocus:border-opacity-80"
